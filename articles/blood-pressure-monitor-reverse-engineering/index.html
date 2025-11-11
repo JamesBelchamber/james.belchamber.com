@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>I didn&#39;t reverse-engineer the protocol for my blood pressure monitor in 24 hours - James Belchamber</title>
+        <meta name="description" content="The personal website of James Belchamber.">
+        <meta name="robots" content="index,follow">
+        <meta name="generator" content="Eleventy">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!--Twitter Card-->
+    <meta name="twitter:site" content="">
+    <meta name="twitter:creator" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://james.belchamber.com/articles/blood-pressure-monitor-reverse-engineering/">
+    <meta name="twitter:title" content="I didn&#39;t reverse-engineer the protocol for my blood pressure monitor in 24 hours - James Belchamber">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+    <!--Schema-->
+    <link rel="author" href="https://james.belchamber.com">
+    <link rel="publisher" href="https://james.belchamber.com">
+    <meta itemprop="name" content="I didn&#39;t reverse-engineer the protocol for my blood pressure monitor in 24 hours - James Belchamber">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="">
+
+    <!-- Facebook OpenGraph -->
+    <meta property="og:url" content="https://james.belchamber.com/articles/blood-pressure-monitor-reverse-engineering/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="I didn&#39;t reverse-engineer the protocol for my blood pressure monitor in 24 hours - James Belchamber">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="">
+    <meta property="og:site_name" content="James Belchamber">
+    <meta property="og:locale" content="en-GB">
+    <meta property="article:author" content="https://james.belchamber.com">
+
+    <!-- Canonical URL -->
+    
+    <link rel="canonical" href="https://james.belchamber.com/articles/blood-pressure-monitor-reverse-engineering/" />
+    <link rel="stylesheet" href="/css/main.css">
+
+        <style>
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+<symbol id="facebook" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></symbol>
+<symbol id="twitter" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></symbol>
+<symbol id="link" viewBox="0 0 24 24"><path d="M13.723 18.654l-3.61 3.609c-2.316 2.315-6.063 2.315-8.378 0-1.12-1.118-1.735-2.606-1.735-4.188 0-1.582.615-3.07 1.734-4.189l4.866-4.865c2.355-2.355 6.114-2.262 8.377 0 .453.453.81.973 1.089 1.527l-1.593 1.592c-.18-.613-.5-1.189-.964-1.652-1.448-1.448-3.93-1.51-5.439-.001l-.001.002-4.867 4.865c-1.5 1.499-1.5 3.941 0 5.44 1.517 1.517 3.958 1.488 5.442 0l2.425-2.424c.993.284 1.791.335 2.654.284zm.161-16.918l-3.574 3.576c.847-.05 1.655 0 2.653.283l2.393-2.389c1.498-1.502 3.94-1.5 5.44-.001 1.517 1.518 1.486 3.959 0 5.442l-4.831 4.831-.003.002c-1.438 1.437-3.886 1.552-5.439-.002-.473-.474-.785-1.042-.956-1.643l-.084.068-1.517 1.515c.28.556.635 1.075 1.088 1.528 2.245 2.245 6.004 2.374 8.378 0l4.832-4.831c2.314-2.316 2.316-6.062-.001-8.377-2.317-2.321-6.067-2.313-8.379-.002z"/></symbol>
+</svg>
+
+        <div class="blog-header">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+<symbol id="facebook" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></symbol>
+<symbol id="twitter" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></symbol>
+<symbol id="link" viewBox="0 0 24 24"><path d="M13.723 18.654l-3.61 3.609c-2.316 2.315-6.063 2.315-8.378 0-1.12-1.118-1.735-2.606-1.735-4.188 0-1.582.615-3.07 1.734-4.189l4.866-4.865c2.355-2.355 6.114-2.262 8.377 0 .453.453.81.973 1.089 1.527l-1.593 1.592c-.18-.613-.5-1.189-.964-1.652-1.448-1.448-3.93-1.51-5.439-.001l-.001.002-4.867 4.865c-1.5 1.499-1.5 3.941 0 5.44 1.517 1.517 3.958 1.488 5.442 0l2.425-2.424c.993.284 1.791.335 2.654.284zm.161-16.918l-3.574 3.576c.847-.05 1.655 0 2.653.283l2.393-2.389c1.498-1.502 3.94-1.5 5.44-.001 1.517 1.518 1.486 3.959 0 5.442l-4.831 4.831-.003.002c-1.438 1.437-3.886 1.552-5.439-.002-.473-.474-.785-1.042-.956-1.643l-.084.068-1.517 1.515c.28.556.635 1.075 1.088 1.528 2.245 2.245 6.004 2.374 8.378 0l4.832-4.831c2.314-2.316 2.316-6.062-.001-8.377-2.317-2.321-6.067-2.313-8.379-.002z"/></symbol>
+</svg>
+
+
+    <header class="container text-white-50">
+        <nav class="navbar navbar-dark navbar-expand-xl">
+            <div class="navbar-brand order-xl-last">
+                <a class="navbar-brand order-xl-last" href="https://james.belchamber.com/">
+                    
+                    James Belchamber
+                    
+                </a>
+            </div>
+            <div class="navbar-header mr-auto collapse navbar-collapse"  id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    
+                    <li class="nav-item">
+                        
+                        <a class="nav-link "   href="/">Home</a>
+                        
+                    </li>
+                    
+                    <li class="nav-item">
+                        
+                        <a class="nav-link "   href="/articles/">Articles</a>
+                        
+                    </li>
+                    
+                    <li class="nav-item">
+                        
+                        <a class="nav-link " target="_blank" rel="noopener"  href="https://github.com/JamesBelchamber">GitHub</a>
+                        
+                    </li>
+                    
+                    <li class="nav-item">
+                        
+                        <a class="nav-link " target="_blank" rel="noopener"  href="https://hachyderm.io/@jamesbelchamber">Mastodon</a>
+                        
+                    </li>
+                    
+                    <li class="nav-item">
+                        
+                        <a class="nav-link " target="_blank" rel="noopener"  href="https://www.linkedin.com/in/jamesbelchamber/">LinkedIn</a>
+                        
+                    </li>
+                    
+                    <li class="nav-item">
+                        
+                        <a class="nav-link " target="_blank"  href="mailto:james@belchamber.com">Email</a>
+                        
+                    </li>
+                    
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+        </div>
+        <main role="main" class="container pt-4">
+            <div class="row" style="background-color: white">
+                    
+    <article class="blog-post px-3">
+            <figure>
+                <img class="img-fluid rounded" src="images/header.jpg" alt=""/>
+            </figure>
+        <div class="row">
+            <div class="col-xl-8">
+                <div class="media">
+                    <div class="media-body pl-sm-2 blog-post-title">
+                        <h1 class="blog-post-title">I didn&#39;t reverse-engineer the protocol for my blood pressure monitor in 24 hours</h1>
+                        <p class="blog-post-meta text-muted">Tue Nov 11 2025</p>
+                    </div>
+                </div>
+                <p>Yesterday after receiving my yearly flu vaccine at the pharmacy I was offered a blood pressure test, which reported a reading that made the young pharmacist who had just given me my vaccine a bit worried.</p>
+<p>Off the back of this she offered me a 24 hour study, and then strapped a cuff to my arm plumbed into a little device which I had to wear in a little caddy - the cuff would inflate every 30 minutes during the day and every 60 minutes during the night, and then tomorrow I would bring it back for analysis.</p>
+<p>&quot;Can I read the measurements?&quot; I asked, as it was being strapped to me.</p>
+<p>&quot;Oh, no, that will just stress you out. We turn that off&quot;. Fair enough.</p>
+<p>Thing is, this device had a little micro-USB port on the side.</p>
+<img class="img-fluid" src="images/revealing-the-port.jpg" alt="A blood pressure monitor with a flap being held back, revealing a micro-USB port">
+<p class="caption text-muted">A blood pressure monitor with a flap being held back, revealing a micro-USB port</p>
+<h1>Doing things the proper way</h1>
+<p>I had started researching the device - a <a href="https://www.microlife.com/professional-products/watchbp-o3/watchbp-o3-ambulatory-2g">Microlife WatchBP O3</a> - before I got out of the chemist, and once I'd got back to the office I downloaded <a href="https://www.microlife.com/support/ambulatory-support">the software</a> that's freely available to interact with it, setting up a Bottles instance to run the software since I don't (knowingly) have a Windows machine within 100 metres of me.</p>
+<img class="img-fluid" src="images/installing-watchbp-analyzer-in-bottles.png" alt="Installing WatchBP Analyzer in Bottles">
+<p class="caption text-muted">Installing WatchBP Analyzer in Bottles</p>
+<p>Unfortunately it didn't seem to be able to access the device, and I had no clue why. In Linux it was just presenting as a standard <code>hidraw</code> device:</p>
+<pre><code>[33301.736724] hid-generic 0003:04D9:B554.001E: hiddev96,hidraw1: USB HID v1.11 Device [USB HID UART Bridge] on usb-0000:c5:00.0-1/input0
+</code></pre>
+<p><em>Fine</em>, I'll install windows.</p>
+<img class="img-fluid" src="images/send-diagnostic-data-to-microsoft.png" alt="Microsoft wants my diagnostic data">
+<p class="caption text-muted">Microsoft wants my diagnostic data</p>
+<p>After dodging around Microsoft's idea of UX, and then forwarding the USB device to the VM (I used <a href="https://apps.gnome.org/en-GB/Boxes/">Gnome Boxes</a> for this, works nicely), I finally got to see WatchBP Analyzer with the data downloaded from the device.</p>
+<img class="img-fluid" src="images/watchbp-analyzer.png" alt="WatchBP Analyzer with my first three measurements">
+<p class="caption text-muted">WatchBP Analyzer with my first three measurements</p>
+<p>But I don't want to open a Virtual Machine running Windows to see this data, and anyway - I'm pretty sure that reverse-engineering this will be good for my blood pressure.</p>
+<h1>Sniffing the traffic</h1>
+<p>Since I'm running this in a Virtual Machine I can just rely on Wireshark in Linux to get the traffic between the host and the device. <code>usbmon</code> is already installed and we know that the device is on Bus 3, so we can select usbmon3 on startup and start capturing.</p>
+<img class="img-fluid" src="images/wireshark-initial.png" alt="Wireshark with the initial capture">
+<p class="caption text-muted">Wireshark with the initial capture</p>
+<p>I'm very much out of my depth at this point but, being <a href="https://www.sciencefocus.com/science/could-i-land-a-plane-in-an-emergency">one of those who could land a plane in an emergency</a> (why would you talk yourself out of it?!) I decided to crack on regardless. I know that the interesting stuff is sent after I press &quot;Download&quot;, and I know that <em>something</em> in there is gonna say <em>&quot;my blood pressure is 137/113&quot;</em> - so let's look for that. Just convert to show bytes as decimal and..</p>
+<img class="img-fluid" src="images/hex-blood-pressure.png" alt="My blood pressure seems to be encoded in this packet">
+<p class="caption text-muted">My blood pressure seems to be encoded in this packet</p>
+<p>..that looks like a blood pressure! Let's copy that out as hex:</p>
+<pre><code>05 0a 89 71 43 9b
+</code></pre>
+<p>I'm not sure if this is &quot;valid&quot; HID Data (Wireshark seems convinced that only the first byte is the Vendor Data, with the rest being padding) but it seems like the data is being sent in 32-byte &quot;chunks&quot;, of which the first byte tells you the number of significant (SIG) following bits in the chunk (I deleted the rest - all zeroes - for clarity). The third byte is my <em>Systolic</em> blood Pressure (SYS), the fourth is my <em>Diastolic</em> blood pressure (DIA), and the fifth is my heart rate (HR) - no clue what the second or last byte is, but let's find all other bytes with my blood pressure in them (in decimal this time, because I can't read hex without help):</p>
+<pre><code>SIG ??? SYS DIA  HR ??? ??? ???
+  5  10 137 113  67 155
+  5   0 132  86  68 155
+  6   0 126  84  82 155  83
+  6  10 128  80  61 155  83
+  7   0 148  93  65 155  83  64
+  7   0 121  92  74 155  83  94
+  7   0 123  83  65 155  83  95
+  7   0 123  79  78 155  83 129
+</code></pre>
+<p>Hmm. So we're still looking for the Oscillometric signal peak pressure (OPP)as well as some timestamps (we can calculate Mean arterial pressure - MAP - as <code>(2*DIA+SYS)/3</code>, according to <a href="https://www.microlife.com/support/software-professional-products/watchbp-analyzer-support">the manual</a>, and Pulse Pressure (PP) is just <code>SYS-DIA</code>). We can see the OPP in the packets that come after each of those above, but they don't seem to consistently come in on the same line:</p>
+<pre><code> 10  82  195   80 *121    0    0    0    0    0    0
+ 10  82  223   80  *95    0    0    0    0    0    0
+  9   1   80  *90    0    0    0    0    0    0
+  9  35   80  *86    0    0    0    0    0    0
+  8  80 *103    0    0    0    0    0    0
+  8  80 *106    0    0    0    0    0    0
+  8  80  *90    0    0    0    0    0    0
+ 10  80  *88    0    0    0    0    0    0   29  251
+</code></pre>
+<p>Oh. Maybe if I stick them together?</p>
+<pre><code>??? SYS DIA  HR ??? ??? ??? ??? OPP ??? ??? ??? ??? ??? ??? ??? ???
+ 10 137 113  67 155  82 195  80 121   0   0   0   0   0   0
+  0 132  86  68 155  82 223  80  95   0   0   0   0   0   0
+  0 126  84  82 155  83   1  80  90   0   0   0   0   0   0
+ 10 128  80  61 155  83  35  80  86   0   0   0   0   0   0
+  0 148  93  65 155  83  64  80 103   0   0   0   0   0   0
+  0 121  92  74 155  83  94  80 106   0   0   0   0   0   0
+  0 123  83  65 155  83  95  80  90   0   0   0   0   0   0
+  0 123  79  78 155  83 129  80  88   0   0   0   0   0   0  29 251
+</code></pre>
+<p>Right, timestamps. I first guessed that the four populated contiguous bytes between <code>HR</code> and <code>OPP</code> are a 32-bit unix timestamp, but that would make the first one <code>9B52C350</code>; either <code>Jul 29 2052</code> or <code>Dec 08 2012</code> depending on which endianness the protocol is into. The 8 readings we have here are all from <code>November 10th</code>, at <code>11:03</code>, <code>11:31</code>, <code>12:01</code>, <code>12:35</code>, <code>13:00</code>, <code>13:30</code>, <code>13:31</code> and <code>14:01</code>, which isn't.. isn't that.</p>
+<p>But note that the number in the 6th column flips from <code>82</code> to <code>83</code> when we switch from AM to PM - that's something, and when it does the 7th column resets. And hey - <code>1</code>, <code>35</code>, <code>64</code>, <code>94</code>, <code>95</code>.. that seems dangerously close to <code>12:01</code>, <code>12:35</code>, <code>13:00</code>, <code>13:30</code> and <code>13:31</code> if you were just to count the minutes. What's going on?</p>
+<h1>Deadlines and dead ends</h1>
+<p>I tried feeding a lot of this into various Als (Kagi gives you access to a few with a nice interface) and I found that they mostly were stupid in ways that made me think. A few times I thought they had <em>&quot;cracked the case&quot;</em> but actually they just made me waste time. But they did remind me e.g. of endianness, so I did get a bit out of them.</p>
+<p><img src="images/hex-is-hard-for-llms.png" alt="Kimi K2 demonstrating creativity with numbers"></p>
+<p>I also spent quite a bit of time trying to write some Python that emulated the initial handshake and download button of the interface so that it could push out the data as a stream instead of me having to wrestle it out of Wireshark - again, Al had a habit of giving me incorrect code (although it did turn me on to <a href="https://pypi.org/project/hid/">pyhidapi</a>).</p>
+<p>But ultimately I had a deadline, and I had to return the device even though I wanted to spend more time with it. Possibly for the best - while it did give me some reverse engineering practice (which it turns out I really enjoy), I should do some work instead of procrastinating.</p>
+<p>My final lesson was a new word - <em>Normotension</em>, normal blood pressure - and a new phrase - <em>White Coat Hypertension</em>, the phenomena of high blood pressure in a clinical setting. Turns out that when you check someone's blood pressure after giving them an injection, it's higher than normal.</p>
+<p>I don't think I'd recommend getting your blood pressure tested after your next flu jab. But then, I'm not a doctor.</p>
+
+                <br/>
+            </div>
+            <aside class="col-xl-4 blog-sidebar">
+    
+    
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-3 shadow-sm position-relative">
+            
+            <div class="col p-3 d-flex flex-column position-static blog-sidebar">
+                
+                
+                <p class="card-text">The personal website of James Belchamber.</p>
+                
+            </div>
+        </div>
+    
+    
+</aside>
+
+        </div>
+    </article>
+
+            </div>
+        </main>
+            <div class="blog-footer">
+                    <footer class="text-white-50">
+        <span>
+            
+            <a style="color: white;"   href="/">Home</a>
+            
+            &nbsp&nbsp|&nbsp&nbsp
+        
+            
+            <a style="color: white;"   href="/articles/">Articles</a>
+            
+            &nbsp&nbsp|&nbsp&nbsp
+        
+            
+            <a style="color: white;" target="_blank"  rel="noopener"  href="https://github.com/JamesBelchamber">GitHub</a>
+            
+            &nbsp&nbsp|&nbsp&nbsp
+        
+            
+            <a style="color: white;" target="_blank"  rel="noopener"  href="https://hachyderm.io/@jamesbelchamber">Mastodon</a>
+            
+            &nbsp&nbsp|&nbsp&nbsp
+        
+            
+            <a style="color: white;" target="_blank"  rel="noopener"  href="https://www.linkedin.com/in/jamesbelchamber/">LinkedIn</a>
+            
+            &nbsp&nbsp|&nbsp&nbsp
+        
+            
+            <a style="color: white;" target="_blank"   href="mailto:james@belchamber.com">Email</a>
+            
+            
+        </span>
+        <br/>
+        <br/>
+        <nav class="nav d-flex justify-content-center">
+            All content Copyright © James Belchamber 2025, except where stated.
+        </nav>
+
+    </footer>
+
+            </div>
+    </body>
+</html>

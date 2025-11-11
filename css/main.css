@@ -221,10 +221,23 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   text-decoration: none;
 }
 
-
+pre,
 code {
   font-family: var(--bs-font-monospace);
   font-size: 1em;
+}
+
+pre {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: auto;
+  font-size: 0.875em;
+}
+pre code {
+  font-size: inherit;
+  color: inherit;
+  word-break: normal;
 }
 
 code {
@@ -261,19 +274,28 @@ button:focus:not(:focus-visible) {
 }
 
 
-button {
+button,
+select {
   margin: 0;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
 
-button {
+button,
+select {
   text-transform: none;
 }
 
 [role=button] {
   cursor: pointer;
+}
+
+select {
+  word-wrap: normal;
+}
+select:disabled {
+  opacity: 1;
 }
 
 button,
@@ -460,12 +482,12 @@ output {
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
- :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active {
+ :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
   color: var(--bs-btn-active-color);
   background-color: var(--bs-btn-active-bg);
   border-color: var(--bs-btn-active-border-color);
 }
- :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible {
+ :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
 .btn:disabled {
@@ -606,7 +628,7 @@ output {
   margin-bottom: 0;
   list-style: none;
 }
-
+.navbar-nav .show > .nav-link,
 .navbar-nav .nav-link.active {
   color: var(--bs-navbar-active-color);
 }
