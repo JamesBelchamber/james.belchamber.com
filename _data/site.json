@@ -1,6 +1,6 @@
 {
     "title": "James Belchamber",
-    "description": "The personal website of James Belchamber, an experienced tech generalist currently working in the charity and educational sectors.",
+    "description": "The personal website of James Belchamber.",
     "lang": "en-GB",
     "navigation": [
         {
@@ -37,7 +37,7 @@
     "sidebar": [
       {
         "blurb": [
-          "The personal website of James Belchamber, an experienced tech generalist currently working in the charity and educational sectors."
+          "The personal website of James Belchamber."
         ]
       }
     ]

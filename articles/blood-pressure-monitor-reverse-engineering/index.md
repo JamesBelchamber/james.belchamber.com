@@ -117,7 +117,7 @@ I tried feeding a lot of this into various Als (Kagi gives you access to a few w
 
 ![Kimi K2 demonstrating creativity with numbers](images/hex-is-hard-for-llms.png)
 
-I also spent quite a bit of time trying to write some Python that emulated the initial handshake and download button of the interface so that it could push out the data as a stream instead of me having to wrestle it out of Wireshark - again, Al had a habit of giving me wrong code (although it did turn me on to [pyhidapi](https://pypi.org/project/hid/)).
+I also spent quite a bit of time trying to write some Python that emulated the initial handshake and download button of the interface so that it could push out the data as a stream instead of me having to wrestle it out of Wireshark - again, Al had a habit of giving me incorrect code (although it did turn me on to [pyhidapi](https://pypi.org/project/hid/)).
 
 But ultimately I had a deadline, and I had to return the device even though I wanted to spend more time with it. Possibly for the best - while it did give me some reverse engineering practice (which it turns out I really enjoy), I should do some work instead of procrastinating.
 
