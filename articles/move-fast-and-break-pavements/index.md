@@ -1,7 +1,7 @@
 ---
 title: "Move fast and break pavements: the sad decline of pedestrian mapping in OpenStreetMap"
 subtitle: "Pavements - sidewalks, for my north american chums - are a hot topic in the world of OpenStreetMap. Unfortunately the way they're now being added has seriously degraded pedestrian routing - at least in the UK."
-date: 2026-02-23
+date: 2026-03-19
 background: images/header.jpg
 layout: layouts/post.njk
 tags:
@@ -11,7 +11,7 @@ tags:
 
 While never really catching up for cars, OpenStreetMap used to be _the best_ place for pedestrian mapping and routing over the past few decades. All sorts of footpaths and cut-throughs which were never added to Google Maps have been dilligently mapped by enthusiastic locals who know their areas like the backs of their hands, and were willing to go out - with GPS receivers, back when phones weren't reliable enough - then add in the tracks, tagging them as appropriate. This made OsmAnd, my choice of pedestrian navigation app, incredibly effective at plotting efficient routes through cities. By contrast, Google Maps would tend to send you down pollution corridors - large, arterial roads and the like - because Google generally maps the UK by car only.
 
-This has started to change, due mainly to a well-intentioned push to add detail which is, nethertheless, corrupting OpenStreetMap.
+This has started to change, due mainly to a well-intentioned push to add detail which is, nevertheless, corrupting OpenStreetMap.
 
 # A classic OpenStreetMap win for pedestrians
 
@@ -74,7 +74,7 @@ Let's consider what happened here. First, let's look at a representation of an a
 <img class="img-fluid" src="images/no-mapping.png" alt="Aerial view of some houses and streets, with no mapping applied">
 <p class="caption text-muted">Aerial view of some houses and streets, with no mapping applied</p>
 
-And then let's fast-forward to the "golden age" - where roads had been added to most roads in the UK, and the "cut-through" footpaths were starting to be added in:
+And then let's fast-forward to the "golden age" - where most roads in the UK had already been mapped, and the "cut-through" footpaths were starting to be added in:
 
 <img class="img-fluid" src="images/integrated-mapping.png" alt="Roads applied in green, footpaths applied in dashed red, pedestrian routing in blue">
 <p class="caption text-muted">Roads applied in green, footpaths applied in dashed red, pedestrian routing in blue</p>
@@ -103,13 +103,15 @@ And this just doesn't work very well with the sort of project OpenStreetMap is. 
 
 # Other solutions (which won't be discussed)
 
-* **Mapping only _some_ pavements.** Many people in the OSM community don't believe all sidewalks should be mapped at all, and instead we should stick to mapping only distinct geometry (e.g. where a sidewalk deviates from a road). Another approach is to only map separated sidewalks where they are alongside roads that are hard to cross (and so a diversion to a physical crossing is more useful).
+There are some interesting alternatives which could be explored to improve the situation, especially in the UK (which is both culturally and infrastructurally distinct from US attitudes towards pedestrians):
+
+* **Selective pavement mapping.** Many people in the OSM community don't believe all sidewalks should be mapped at all, and instead we should stick to mapping only distinct geometry (e.g. where a sidewalk deviates from a road). Another approach is to only map separated sidewalks where they are alongside roads that are hard to cross (and so a diversion to a physical crossing is more useful).
 * **Bundling components of a road together.** OpenStreetMap was not really designed to express "complex ways" (one reason why lanes of a road aren't mapped) - an update to the underlying schema which allows for related ways to be grouped together - and so, routed between - would neatly solve many of the problems with separated sidewalks.
 * **Only mapping pavements in specific areas.** It is notable that separated sidewalks aren't *universally* bad. Paris is often called out as having good separate sidewalk mapping (which I understand to be down to their active local community), and in other parts of the world municipal datasets have been made available that allow for accurate large-scale imports. And of course, where "Jaywalking" is a crime, maybe the map should reflect only legal crossings!
 
-There isn't much appetite for any of this, however. Sidewalks have become an incredibly contentious subject in the OpenStreetMap community, where there is a consistent pattern of people raising issues with the status quo then being accused of acting in bad faith. This has been exacerbated by some "activist" mappers targeting the areas of people raising issues, adding (generally badly) separated sidewalks to their area.
+But there isn't much appettite for discussing any of this. Sidewalks have become an incredibly contentious subject in the OpenStreetMap community, and discussion quickly toxifies into accusations of bad faith and discrimination. This has been exacerbated by some mappers targeting the areas of people raising issues and adding (generally badly) separated sidewalks to their area.
 
-Worse, Facebook got involved.
+To complicate matters, Facebook got involved.
 
 # The Meta problem
 
@@ -122,7 +124,7 @@ The status quo in OpenStreetMap is that you cannot delete a sidewalk if it exist
 
 And if you excuse the conspiratorial tone to this next bit: this is possibly by design.
 
-Or at least - the combination of a large glut of new, badly mapped sidewalk ways, combined with the drowning out of objections to the separated sidewalk mapping approach, seem to conspire to force local mappers to do the large amount of fixup work if they want their local maps to return to the functionality they previously had.
+Or at least - the combination of a large glut of new, badly mapped sidewalk ways, combined with the drowning out and shutting down of objections to the separated sidewalk mapping approach, seem to conspire to force local mappers to do the large amount of fixup work if they want their local maps to return to the functionality they previously had.
 
 # The Google solution
 
@@ -130,4 +132,4 @@ Regardless of the intent, this probably isn't what's going to happen. I am a fai
 
 I think what I need to do is step back and consider things more holistically - I think that an open source map is valuable, and I'd like to contribute to that - but I think it's more valuable that I have a reliable walking map that keeps me from driving places, and I don't want to get in (more) arguments with people on the internet.
 
-In that sense, and for now, Google Maps is better for me.
+In that sense, and for now, Google Maps is better for me. And maybe, for now, also for you.
