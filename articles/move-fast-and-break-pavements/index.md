@@ -101,17 +101,30 @@ It also requires a *lot* more rigour than the "golden age", where adding a footp
 
 And this just doesn't work very well with the sort of project OpenStreetMap is. Mappers, by and large, aren't professionals - they're just scratching their own itches, iteratively improving the map for everyone as they improve it for themselves. 
 
-# Other solutions (which won't be discussed)
+# Other solutions
 
 There are some interesting alternatives which could be explored to improve the situation, especially in the UK (which is both culturally and infrastructurally distinct from US attitudes towards pedestrians):
 
-* **Selective pavement mapping.** Many people in the OSM community don't believe all sidewalks should be mapped at all, and instead we should stick to mapping only distinct geometry (e.g. where a sidewalk deviates from a road). Another approach is to only map separated sidewalks where they are alongside roads that are hard to cross (and so a diversion to a physical crossing is more useful).
+* **Selective pavement mapping.** Many people in the OSM community don't believe all sidewalks should be mapped at all, and instead suggest we stick to mapping only distinct geometry (e.g. where a sidewalk deviates meaningfully from a road). Another approach is to only map separated sidewalks alongside roads that are genuinely hard to cross (and so a diversion to a physical crossing is more useful).
 * **Bundling components of a road together.** OpenStreetMap was not really designed to express "complex ways" (one reason why lanes of a road aren't mapped) - an update to the underlying schema which allows for related ways to be grouped together - and so, routed between - would neatly solve many of the problems with separated sidewalks.
-* **Only mapping pavements in specific areas.** It is notable that separated sidewalks aren't *universally* bad. Paris is often called out as having good separate sidewalk mapping (which I understand to be down to their active local community), and in other parts of the world municipal datasets have been made available that allow for accurate large-scale imports. And of course, where "Jaywalking" is a crime, maybe the map should reflect only legal crossings!
+* **Only mapping pavements in specific areas.** It is notable that separated sidewalks aren't *universally* bad. Paris is often called out as having good separate sidewalk mapping (which I understand to be down to their active and well-coordinated local community), and in other parts of the world municipal datasets have been made available that allow for accurate large-scale imports. And of course, where "Jaywalking" is a crime, maybe the map should reflect only legal crossings!
 
-But there isn't much appettite for discussing any of this. Sidewalks have become an incredibly contentious subject in the OpenStreetMap community, and discussion quickly toxifies into accusations of bad faith and discrimination. This has been exacerbated by some mappers targeting the areas of people raising issues and adding (generally badly) separated sidewalks to their area.
+And there may well be other solutions lurking in the back of our minds which could "solve" the sidewalk problem in OpenStreetMap, a problem which I believe at its core is solveable through creativity and good engineering. The difficulty is that the community has congealed into a very divisive pro/anti-separated sidewalks debate, where every person who engages finds themselves pigeon-holed into one of the two groups, much more like modern politics - and this makes progress incredibly difficult.
 
-To complicate matters, Facebook got involved.
+It's not impossible to return to the table, however. And there's a good reason for "both sides" to do so.
+
+# Who does the status quo serve?
+
+A frustration of my own throughout this has been that the status quo serves nobody well:
+
+* For able-bodied pedestrians the map is worse until and unless the sidewalks are "completed", down to the individual crossings.
+* "Completing" the sidewalks then makes the map worse again for people with accessibility needs, until the crossings are all tagged up with access tags.
+* After meeting both of the above points, a false sense of accessibility is projected onto many streets which are not really accessible (due to street furniture, narrow sections, pavement parking, etc).
+
+For example, separately mapping this street perfectly would not be useful for anyone with accessibility needs - and unfortunately, is very common:
+
+<img class="img-fluid" src="images/bin-blocking-pavement.png" alt="A bin blocking a pavement">
+<p class="caption text-muted">A bin blocking a pavement</p>
 
 # The Meta problem
 
@@ -122,14 +135,10 @@ Facebook's ["walkabout" initiative](https://wiki.openstreetmap.org/wiki/Organise
 
 The status quo in OpenStreetMap is that you cannot delete a sidewalk if it exists - you can only improve it. So if you find yourself in an area where separated sidewalks have been placed, your only option is to *"draw the rest of the owl"* - all the little connections that we talked about above, which make the map routable for pedestrians again. This was not really a big problem at first - individual volunteers could only do so much, so there was only so much to fix - but with initiatives like the walkabout whole cities were having large networks of sidewalks dropped down in short order, certainly more quickly than local mappers could object.
 
-And if you excuse the conspiratorial tone to this next bit: this is possibly by design.
+# A conclusion
 
-Or at least - the combination of a large glut of new, badly mapped sidewalk ways, combined with the drowning out and shutting down of objections to the separated sidewalk mapping approach, seem to conspire to force local mappers to do the large amount of fixup work if they want their local maps to return to the functionality they previously had.
+Being honest, I have gone back to Google Maps for day-to-day navigation. They have caught up in many ways with the little routes OSM excelled at, to the point that they are now a better pedestrian mapping tool for most people. I don't like this - I am very much someone who prefers open source software and community-sourced data - but I also need to be pragmatic, and at the end of the day I need to be able to get from A to B without being led on large detours.
 
-# The Google solution
+But this doesn't have to be the case - if OSM can overcome this very politically-coded all-or-nothing approach to separated sidewalks then ultimately this is just an engineering problem, and the solution is just iteration. The first iteration may just be to have a better-balanced coexistence - separated where it solves a problem, integrated where it doesn't - and then to solve each collision 
 
-Regardless of the intent, this probably isn't what's going to happen. I am a fairly avid supporter of free and open source software, but even I have been put off by this - and truth be told, I use Google Maps again now. They have caught up in many ways with the little routes OSM excelled at, and while I could "knuckle down" I don't really believe that OSM can muster the volunteer army necessary to make the current approach successful (at least, not outside of an externally sourced dataset).
-
-I think what I need to do is step back and consider things more holistically - I think that an open source map is valuable, and I'd like to contribute to that - but I think it's more valuable that I have a reliable walking map that keeps me from driving places, and I don't want to get in (more) arguments with people on the internet.
-
-In that sense, and for now, Google Maps is better for me. And maybe, for now, also for you.
+Or maybe it's a brand new idea nobody has thought of, and which solves all the problems - and which the community is open to.
